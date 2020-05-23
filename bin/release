@@ -6,4 +6,6 @@ addons:
   - heroku-postgresql
 default_process_types:
   web: deno server.js
+config_vars:
+  PATH: $PATH:/app/.deno/bin
 EOF
