@@ -34,12 +34,7 @@ export_env_dir() {
   fi
 }
 
-addToPATH() {
-    PATH="$DENO_INSTALL/bin:$PATH"
-    fi
-}
-
-addToPATH
+PATH="$DENO_INSTALL/bin:$PATH"
 #export_env_dir
 
 echo "0 : $DENO_INSTALL"
