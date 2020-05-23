@@ -10,14 +10,10 @@ echo "$CACHE_DIR"
 echo "$ENV_DIR"
 echo "$BP_DIR"
 
-ls $ENV_DIR
-
-cd ..
-
-cd $BUILD_DIR
+cd $1
 
 
-curl -fsSL https://deno.land/x/install/install.sh | sh
+source "$BP_DIR/lib/load.sh"
 
 export DENO_INSTALL="/app/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
