@@ -21,21 +21,6 @@ echo "0 : $DENO_INSTALL"
 echo "1 : $DENO_INSTALL/bin:$PATH"
 echo "By GrayHat"
 
-export_env_dir() {
-  env_dir="$DENO_INSTALL/bin:$PATH"
-  acceptlist_regex=${2:-''}
-  denylist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
-  if [ -d "$env_dir" ]; then
-    for e in $(ls $env_dir); do
-      echo "$e" | grep -E "$acceptlist_regex" | grep -qvE "$denylist_regex" &&
-      export "$e=$(cat $env_dir/$e)"
-      :
-    done
-  fi
-}
-
-export_env_dir
-
 deno --help
 
 sleep 20
