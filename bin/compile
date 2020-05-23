@@ -15,7 +15,7 @@ cd $BUILD_DIR
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
 export DENO_INSTALL="/app/.deno"
-#export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 echo "0 : $DENO_INSTALL"
 echo "1 : $DENO_INSTALL/bin:$PATH"
