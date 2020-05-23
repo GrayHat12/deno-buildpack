@@ -32,6 +32,8 @@ export_env_dir() {
   fi
 }
 
+export_env_dir
+
 deno --help
 
 sleep 20
