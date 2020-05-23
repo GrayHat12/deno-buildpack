@@ -14,11 +14,11 @@ cd $1
 
 ls
 
-curl -fsSL https://deno.land/x/install/install.sh | sh
+curl -fsSL https://deno.land/x/install/install.sh | DENO_DIR="$BUILD_DIR/.deno" sh
 
 ls
 
-export DENO_INSTALL="/app/.deno"
+export DENO_INSTALL="$BUILD_DIR/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 PATH="$DENO_INSTALL/bin:$PATH"
@@ -29,6 +29,6 @@ echo "$HOME"
 echo "1 : $DENO_INSTALL/bin:$PATH"
 echo "By GrayHat"
 
-#deno --help
+#deno 
 
 sleep 20
