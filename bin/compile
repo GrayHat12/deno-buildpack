@@ -16,7 +16,7 @@ ls
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
-mv $HOME/.deno $BUILD_DIR
+mv "$HOME/.deno" "$BUILD_DIR/"
 
 ls
 
@@ -31,6 +31,6 @@ echo "$HOME"
 echo "1 : $DENO_INSTALL/bin:$PATH"
 echo "By GrayHat"
 
-#deno 
+deno DENO_DIR="$BUILD_DIR/.deno/"
 
 sleep 20
