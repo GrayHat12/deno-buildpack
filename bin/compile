@@ -16,7 +16,7 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 
 echo "By GrayHat"
 
-export PATH="$BUILD_DIR/heroku/.deno/bin":$PATH
-export PATH="$BUILD_DIR/app/.deno/bin":$PATH
+export DENO_INSTALL="/app/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 sleep 20
