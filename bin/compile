@@ -10,7 +10,12 @@ echo "$CACHE_DIR"
 echo "$ENV_DIR"
 echo "$BP_DIR"
 
+cd $ENV_DIR ; ls
+
+cd ..
+
 cd $BUILD_DIR
+
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
@@ -18,13 +23,12 @@ export DENO_INSTALL="/app/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 export_env_dir() {
-  env_dir=$1
   acceptlist_regex=${2:-''}
   denylist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
-  if [ -d "$env_dir" ]; then
-    for e in $(ls $env_dir); do
+  if [ -d "$ENV_DIR" ]; then
+    for e in $(ls $ENV_DIR); do
       echo "$e" | grep -E "$acceptlist_regex" | grep -qvE "$denylist_regex" &&
-      export "$e=$(cat $env_dir/$e)"
+      export "$e=$(cat $ENV_DIR/$e)"
       :
     done
   fi
@@ -37,6 +41,6 @@ echo "$HOME"
 echo "1 : $DENO_INSTALL/bin:$PATH"
 echo "By GrayHat"
 
-deno --help
+#deno --help
 
 sleep 20
