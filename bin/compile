@@ -14,6 +14,9 @@ cd $BUILD_DIR
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
+
+echo "0 : $DENO_INSTALL"
+echo "1 : $DENO_INSTALL/bin:$PATH"
 echo "By GrayHat"
 
 #export DENO_INSTALL="/app/.deno"
