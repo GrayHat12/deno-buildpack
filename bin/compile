@@ -2,3 +2,6 @@ echo "Installing Deno 1.0"
 
 curl -fsSL https://deno.land/x/install/install.sh | sh
 
+echo "By GrayHat"
+
+sleep 5
