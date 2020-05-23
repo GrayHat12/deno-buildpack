@@ -12,8 +12,9 @@ echo "$BP_DIR"
 
 cd $1
 
+ls
 
-source "$BP_DIR/lib/load.sh"
+curl -fsSL https://deno.land/x/install/install.sh | sh
 
 export DENO_INSTALL="/app/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
