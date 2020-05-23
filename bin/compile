@@ -16,11 +16,11 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 
 echo "By GrayHat"
 
-export DENO_INSTALL="/app/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+#export DENO_INSTALL="/app/.deno"
+#export PATH="$DENO_INSTALL/bin:$PATH"
 
 export_env_dir() {
-  env_dir=$DENO_INSTALL
+  env_dir="$DENO_INSTALL/bin:$PATH"
   acceptlist_regex=${2:-''}
   denylist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
   if [ -d "$env_dir" ]; then
