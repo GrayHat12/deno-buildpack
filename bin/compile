@@ -18,6 +18,7 @@ export DENO_INSTALL="/app/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 echo "0 : $DENO_INSTALL"
+echo "$HOME"
 echo "1 : $DENO_INSTALL/bin:$PATH"
 echo "By GrayHat"
 
