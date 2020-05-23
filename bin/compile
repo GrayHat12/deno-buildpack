@@ -14,7 +14,9 @@ cd $1
 
 ls
 
-curl -fsSL https://deno.land/x/install/install.sh | DENO_DIR="$BUILD_DIR/.deno" sh
+curl -fsSL https://deno.land/x/install/install.sh | sh
+
+mv $HOME/.deno $BUILD_DIR
 
 ls
 
