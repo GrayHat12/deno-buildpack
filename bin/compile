@@ -19,4 +19,6 @@ echo "By GrayHat"
 export DENO_INSTALL="/app/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+deno --help
+
 sleep 20
