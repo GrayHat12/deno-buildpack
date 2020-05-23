@@ -35,9 +35,7 @@ export_env_dir() {
 }
 
 addToPATH() {
-    local targetDir="${1}"
-    if echo "${PATH}" | grep -v "${targetDir}" &> /app/./deno/bin; then
-        PATH="${targetDir}:${PATH}"
+    PATH="$DENO_INSTALL/bin:$PATH"
     fi
 }
 
